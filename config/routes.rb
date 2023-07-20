@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  use_doorkeeper
   devise_for :users
   resources :books
   get 'pages/home'
@@ -7,4 +8,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   root "pages#home"
+
+  draw :api
 end
